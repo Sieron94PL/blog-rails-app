@@ -6,11 +6,26 @@
   Age:
   <%= @author.age %>
   <hr />
+
   Created_at:
   <%= @author.created_at %>
   <hr />
+
   Updated_at:
   <%= @author.updated_at %>
+  <hr />
+
+  <% if @author.posts %>
+  Author posts: <br /> <br />
+  <% @author.posts.each do |post| %>
+
+  Title:
+  <%= post.title %>
+
+  Content:
+  <%= post.content %>
+  <% end %>
+  <% end %>
   <hr />
 </p>
 

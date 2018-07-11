@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   # get '/authors/:id', to: 'authors#show', as: :author
   # get '/author/new', to: 'authors#new', as: :new_author
   resources :authors
+  resources :posts
 end

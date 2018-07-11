@@ -1,0 +1,16 @@
+<h1>
+<%= @post.title  %>
+</h1>
+
+<p>
+  Content:
+  <%= @post.content %>
+  <hr />
+  Author:
+  <% if @post.author %>
+  <%= @post.author.fullname %>
+  <% end %>
+  <hr />
+</p>
+
+<%= link_to 'Back to posts', posts_path %>
