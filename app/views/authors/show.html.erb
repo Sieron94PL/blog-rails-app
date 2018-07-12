@@ -16,14 +16,14 @@
   <hr />
 
   <% if @author.posts %>
-  Author posts: <br /> <br />
+  Author posts: <br />
   <% @author.posts.each do |post| %>
 
   Title:
-  <%= post.title %>
-
+  <strong> <%= post.title  %> </strong>
   Content:
-  <%= post.content %>
+  <strong> <%= post.content %> </strong>
+  <br/>
   <% end %>
   <% end %>
   <hr />
