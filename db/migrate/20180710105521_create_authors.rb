@@ -4,6 +4,7 @@ class CreateAuthors < ActiveRecord::Migration[5.2]
       t.string :name
       t.string :surname
       t.integer :age
+      t.timestamps 
     end
   end
 end
