@@ -1,0 +1,10 @@
+<% if @post.comments %>
+<div class="container"
+    <ul class="list-group">
+    <% @post.comments.each do |comment| %>
+      <%= render 'comments/comment', comment: comment %>
+    <% end %>
+  </ul>
+</div>
+
+<% end %>

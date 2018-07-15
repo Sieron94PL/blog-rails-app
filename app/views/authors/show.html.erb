@@ -1,32 +1,22 @@
 <h1>
-<%= @author.fullname  %>
+  <%= @author.fullname %>
 </h1>
 
 <p>
   Age:
-  <%= @author.age %>
-  <hr />
+  <strong><%= @author.age %></strong>
+  <hr/>
 
-  Created_at:
-  <%= @author.created_at %>
-  <hr />
+  Created_at
+  <strong><%= @author.created_at %></strong>
+  <hr/>
 
   Updated_at:
-  <%= @author.updated_at %>
-  <hr />
+  <strong><%= @author.updated_at %></strong>
+  <hr/>
 
-  <% if @author.posts %>
-  Author posts: <br />
-  <% @author.posts.each do |post| %>
-
-  Title:
-  <strong> <%= post.title  %> </strong>
-  Content:
-  <strong> <%= post.content %> </strong>
-  <br/>
-  <% end %>
-  <% end %>
-  <hr />
+  <h1>Author posts</h1>
+    <% @author.posts.each do |post| %>
+      <%= render 'posts/post', post: post %>
+    <% end %>
 </p>
-
-<%= link_to 'Back to authors', authors_path %>

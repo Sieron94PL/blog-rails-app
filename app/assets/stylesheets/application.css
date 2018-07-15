@@ -13,3 +13,17 @@
  *= require_tree .
  *= require_self
  */
+
+ .postTitle {
+   font-size: 22px;
+   text-align: center;
+   color: black;
+ }
+
+ .postTitle a:hover {
+   text-decoration: none;
+ }
+
+ .rowHeight div {
+  height: 3vh; /* 30% of viewport height*/
+}

@@ -1,16 +1,18 @@
 <h1>
-<%= @post.title  %>
+  <%= @post.title %>
 </h1>
 
 <p>
   Content:
-  <%= @post.content %>
-  <hr />
+  <strong><%= @post.content %></strong>
+  <hr/>
   Author:
   <% if @post.author %>
-  <%= @post.author.fullname %>
+    <strong><%= @post.author.fullname %></strong>
   <% end %>
-  <hr />
+  <hr/>
 </p>
-
-<%= link_to 'Back to posts', posts_path %>
+<h1>Comments</h1>
+<ul>
+<%= render 'comments/index' %>
+<%= render 'comments/form' %>

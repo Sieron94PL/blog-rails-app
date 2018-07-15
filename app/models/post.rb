@@ -5,6 +5,7 @@ class Post < ActiveRecord::Base
   validates :content, length: {in: 10..500}
 
   belongs_to  :author, optional: true
+  has_many :comments
   # has_many :author_posts
   # has_many :author, through: :author_posts
 

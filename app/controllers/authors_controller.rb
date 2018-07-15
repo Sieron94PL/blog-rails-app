@@ -2,6 +2,7 @@ class AuthorsController < ApplicationController
 
   def index
     @authors = Author.all
+    @author = Author.new
   end
 
   def show
@@ -15,7 +16,7 @@ class AuthorsController < ApplicationController
   def create
     @author = Author.new(author_params)
     if @author.save
-      redirect_to authors_path, notice: 'Author was created'
+      redirect_to author_params, notice: 'Author was created'
     else
       render :new
     end
@@ -35,13 +36,10 @@ class AuthorsController < ApplicationController
   end
 
   def destroy
-    author = Author.find(params[:id])
-    if author.destroy
-     redirect_to authors_path, notice: 'Author was destroyed'
-    else
-     redirect_to authors_path, alert: 'There was an error while destroying. Please try again'
-    end
+    @author = Author.find(params[:id])
+    @author.destroy
   end
+
 
   private
 

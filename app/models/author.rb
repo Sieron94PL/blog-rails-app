@@ -1,6 +1,7 @@
 #author.errors.full_message
 class Author < ActiveRecord::Base
   validates :name, :surname, presence: true
+  validates :age, numericality: { only_integer: true, greater_than: 18 }
 
   has_many :posts
   # has_many :author_posts
