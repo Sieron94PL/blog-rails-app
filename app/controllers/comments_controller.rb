@@ -5,7 +5,7 @@ class CommentsController < ApplicationController
     if @comment.save
       redirect_to post_url(comment_params[:post_id]), notice: 'Comment added'
     else
-      redirect_to post_url(comment_params[:post_id]), alert: 'Something went wrong', comment: @comment
+      redirect_to post_url(comment_params[:post_id]), alert: 'Something went wrong'
     end
   end
 
