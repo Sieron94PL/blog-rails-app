@@ -1,7 +1,7 @@
 class CommentsController < ApplicationController
 
   def create
-    @comment = Comment.new(comment_params)ele
+    @comment = Comment.new(comment_params)
     if @comment.save
       redirect_to post_url(comment_params[:post_id]), notice: 'Comment added'
     else
