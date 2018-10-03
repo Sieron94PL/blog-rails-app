@@ -1,24 +1,12 @@
-# README
+# Test blog
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The purpose of this application was getting to know the basic possibilites of Ruby on Rails.
 
-Things you may want to cover:
+Basic functionalities:
+* adding new authors
+* editing/deleting authors
+* adding new posts
+* editing/deleting only own posts
+* adding comments to own and other posts
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Technologies used: Ruby on Rails, ERB, JavaScript, Bootstrap
